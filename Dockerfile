@@ -1,7 +1,9 @@
 # Dockerfile to run 32bit kdb+ on raspberrypi
 # Created by honus85
 
-FROM resin/rpi-raspbian
+FROM resin/armv7hf-debian
+
+RUN [ "cross-build-start" ]
 MAINTAINER honus85 <github.com/honus85>
 
 # Set Env variables for q
@@ -18,3 +20,5 @@ RUN \
 	alias q='rlwrap q'
 
 WORKDIR /
+
+RUN [ "cross-build-end" ]  
