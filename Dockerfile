@@ -6,7 +6,7 @@ MAINTAINER honus85 <github.com/honus85>
 
 # Set Env variables for q
 ENV QHOME /q
-ENV PATH ${PATH}:${QHOME}/l32/
+ENV PATH ${PATH}:${QHOME}/l32arm/
 
 # Install kdb+
 RUN \ 
