@@ -9,9 +9,9 @@ ENV QHOME /q
 ENV PATH ${PATH}:${QHOME}/l32/
 
 # Install kdb+
-RUN \
+RUN \ 
 	apt-get update && \
-	apt-get install -y curl rlwrap unzip ia32-libs && \
+	apt-get install -y curl rlwrap unzip lib32z1 && \
 	curl --silent -O kx.com/347_d0szre-fr8917_llrsT4Yle-5839sdX/3.5/linuxarm.zip && \
 	unzip linuxarm.zip && \
 	rm linuxarm.zip && \
