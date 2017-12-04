@@ -1,7 +1,7 @@
 # Dockerfile to run 32bit kdb+ on raspberrypi
 # Created by honus85
 
-FROM resin/rpi-raspbian:jessie
+FROM resin/rpi-raspbian
 MAINTAINER honus85 <github.com/honus85>
 
 # Set Env variables for q
