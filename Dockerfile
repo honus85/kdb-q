@@ -5,11 +5,11 @@ FROM resin/armv7hf-debian
 
 
 MAINTAINER honus85 <github.com/honus85>
-RUN [ "cross-build-start" ]
 # Set Env variables for q
 ENV QHOME /q
 ENV PATH ${PATH}:${QHOME}/l32arm/
 
+RUN [ "cross-build-start" ]
 # Install kdb+
 RUN \ 
 	apt-get update && \
