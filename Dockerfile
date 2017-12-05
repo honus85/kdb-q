@@ -3,9 +3,9 @@
 
 FROM resin/armv7hf-debian
 
-RUN [ "cross-build-start" ]
-MAINTAINER honus85 <github.com/honus85>
 
+MAINTAINER honus85 <github.com/honus85>
+RUN [ "cross-build-start" ]
 # Set Env variables for q
 ENV QHOME /q
 ENV PATH ${PATH}:${QHOME}/l32arm/
@@ -18,7 +18,8 @@ RUN \
 	unzip linuxarm.zip && \
 	rm linuxarm.zip && \
 	alias q='rlwrap q'
-
+	
+RUN [ "cross-build-end" ]  
 WORKDIR /
 
-RUN [ "cross-build-end" ]  
+
