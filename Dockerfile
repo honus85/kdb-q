@@ -16,8 +16,7 @@ RUN \
 	apt-get install -y curl rlwrap unzip && \
 	curl --silent -O kx.com/347_d0szre-fr8917_llrsT4Yle-5839sdX/3.5/linuxarm.zip && \
 	unzip linuxarm.zip && \
-	rm linuxarm.zip && \
-	alias q='rlwrap q'
+	rm linuxarm.zip
 	
 RUN [ "cross-build-end" ]  
 WORKDIR /
